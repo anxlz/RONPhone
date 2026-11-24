@@ -327,6 +327,25 @@ html,body{height:100%;background:#000;overflow:hidden;font-family:-apple-system,
 .zoom{position:absolute;top:114px;left:50%;transform:translateX(-50%);z-index:6;display:flex;gap:8px;background:rgba(0,0,0,.4);border-radius:22px;padding:4px;font-size:12px;font-weight:600}
 .zoom div{width:34px;height:34px;border-radius:17px;display:flex;align-items:center;justify-content:center;cursor:pointer}.zoom .a{background:rgba(0,0,0,.6);color:#ffd60a}
 .rectime{position:absolute;top:112px;left:50%;transform:translateX(-50%);background:#ff3b30;color:#fff;border-radius:6px;padding:2px 10px;font-size:14px;font-weight:600;z-index:7;display:none;direction:ltr}
+
+#a-wa{background:#0b141a;color:#e9edef}
+#wa-list,#wa-chat{position:absolute;inset:0}#wa-chat{display:none;background:#0b141a}
+.wa-h{position:absolute;top:0;left:0;right:0;padding:56px 18px 10px;font-size:26px;font-weight:700;background:#0b141a;z-index:3}
+#wa-body{padding:106px 0 96px}
+.wa-tabs{position:absolute;bottom:0;left:0;right:0;height:84px;background:#111b21;border-top:.5px solid #26343c;display:flex;z-index:4}
+.wa-tabs div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;color:#8696a0;cursor:pointer}.wa-tabs div.a{color:#00a884}.wa-tabs div b{font-size:20px;font-weight:400}
+.wa-r{display:flex;gap:12px;padding:9px 16px;align-items:center;cursor:pointer}.wa-r:active{background:#182229}
+.wa-av{width:48px;height:48px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:19px;color:#fff}.wa-av.sq{border-radius:14px}
+.wa-in{min-width:0;flex:1}.wa-n{font-size:16.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.wa-p{font-size:14px;color:#8696a0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}.wa-tm{font-size:12px;color:#8696a0;align-self:flex-start;margin-top:4px}
+.wa-sec{padding:10px 16px 4px;font-size:13px;color:#8696a0}.wa-g{padding-inline-start:44px}
+.wa-ch{position:absolute;top:0;left:0;right:0;padding:56px 12px 10px;background:#1f2c34;display:flex;align-items:center;gap:10px;z-index:3}.wa-ch #wa-bk{font-size:30px;line-height:1;cursor:pointer;padding:0 4px}.wa-ch .wa-av{width:38px;height:38px;font-size:16px}.wa-ch #wa-cn{font-weight:600;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#wa-msgs{position:absolute;top:104px;bottom:60px;left:0;right:0;overflow-y:auto;padding:10px 12px;display:flex;flex-direction:column;gap:5px;scrollbar-width:none}
+.wa-b{max-width:80%;padding:6px 10px 7px;border-radius:10px;font-size:15px;line-height:1.45;background:#202c33;align-self:flex-end;white-space:pre-wrap;text-align:start}.wa-b.o{background:#005c4b;align-self:flex-start}.wa-b i{display:block;font-style:normal;font-size:12.5px;font-weight:600;margin-bottom:2px}
+.wa-pill{align-self:center;background:#182229;color:#8696a0;font-size:12.5px;padding:4px 12px;border-radius:9px;margin:6px 0}
+.wa-inp{position:absolute;bottom:0;left:0;right:0;height:60px;background:#0b141a;padding:8px 12px 12px;z-index:3}.wa-inp div{height:100%;border-radius:22px;background:#202c33;color:#8696a0;display:flex;align-items:center;padding:0 16px;font-size:15px}
+@media (max-height:740px){.widgets{top:70px}.widget{border-radius:20px;padding:10px}.w-weather .deg{font-size:38px}.w-cal .dd{font-size:44px}.grid{top:252px;gap:14px 6px}.app .icon{width:54px;height:54px;font-size:26px}.dock{height:80px;bottom:18px}#lock .time{font-size:76px}#lock .notifs{top:250px}}
+@media (max-width:360px){.grid{left:8px;right:8px}.app .icon{width:52px;height:52px}.app span{font-size:11px}.dock{gap:18px}}
+@media (min-width:520px){html,body{background:radial-gradient(80% 80% at 50% 30%,#1a2238,#07080c)}body{display:flex;align-items:center;justify-content:center}#phone{position:relative;inset:auto;width:min(410px,92vw);height:min(880px,96dvh);border-radius:48px;border:9px solid #1c1c1e;box-shadow:0 0 0 2px #3a3a3c,0 30px 80px rgba(0,0,0,.7)}}
 </style>
 </head>
 <body>
@@ -344,7 +363,7 @@ html,body{height:100%;background:#000;overflow:hidden;font-family:-apple-system,
   </div>
   <div class="notifs">
     <div class="notif red"><div class="ic" style="background:#30d158"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div><div><div class="t">دانة (المدير العام) (3)</div><div class="m">3 مكالمات فائتة</div></div><div class="n">الآن</div></div>
-    <div class="notif"><div class="ic" style="background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#fff"/></svg></div><div><div class="t">عبدالرحمن (مدير الرياضات الالكترونية)</div><div class="m">متى يجيني الاعتماد ؟</div></div><div class="n">الآن</div></div>
+    <div class="notif"><div class="ic" style="background:#25d366"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg></div><div><div class="t">عبدالرحمن (مدير الرياضات الالكترونية)</div><div class="m">متى يجيني الاعتماد ؟</div></div><div class="n">الآن</div></div>
   </div>
   <div class="lock-hint">المس الشاشة أو اسحب للأعلى للفتح</div>
 </div>
@@ -362,10 +381,11 @@ html,body{height:100%;background:#000;overflow:hidden;font-family:-apple-system,
     <div class="app" data-app="notes"><div class="icon" style="background:linear-gradient(180deg,#ffd60a 0 22%,#fff 22%)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c9a000" stroke-width="1.6"><path d="M5 10h14M5 14h14M5 18h9"/></svg></div><span>الملاحظات</span></div>
     <div class="app" data-app="ig"><div class="icon" style="background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#fff"/></svg></div><span>Instagram</span></div>
     <div class="app" data-app="music"><div class="icon" style="background:linear-gradient(180deg,#ff5d73,#fa233b)">🎵</div><span>الموسيقى</span></div><div class="app" data-app="clock"><div class="icon" style="background:#000;border:1px solid #333">🕐</div><span>الساعة</span></div><div class="app" data-app="msgs"><div class="icon" style="background:linear-gradient(180deg,#5af575,#12b83a)">💬</div><span>الرسائل</span></div>
-  </div><div class="grid"><div class="app" data-app="calc"><div class="icon" style="background:#ff9f0a">🧮</div><span>الآلة الحاسبة</span></div><div class="app" data-app="settings"><div class="icon" style="background:linear-gradient(180deg,#9a9aa0,#636366)">⚙️</div><span>الإعدادات</span></div><div class="app" data-app="store"><div class="icon" style="background:linear-gradient(180deg,#38b6ff,#0a60ff)">Ⓐ</div><span>App Store</span></div></div></div>
+  </div><div class="grid"><div class="app" data-app="calc"><div class="icon" style="background:#ff9f0a">🧮</div><span>الآلة الحاسبة</span></div><div class="app" data-app="settings"><div class="icon" style="background:linear-gradient(180deg,#9a9aa0,#636366)">⚙️</div><span>الإعدادات</span></div><div class="app" data-app="store"><div class="icon" style="background:linear-gradient(180deg,#38b6ff,#0a60ff)">Ⓐ</div><span>App Store</span></div><div class="app" data-app="safari"><div class="icon" style="background:linear-gradient(180deg,#fff,#cfe3ff)">🧭</div><span>Safari</span></div><div class="app" data-app="mail"><div class="icon" style="background:linear-gradient(180deg,#4da3ff,#0a60ff)">✉️</div><span>البريد</span></div><div class="app" data-app="yt"><div class="icon" style="background:#fff">▶️</div><span>YouTube</span></div><div class="app" data-app="snap"><div class="icon" style="background:#fffc00">👻</div><span>Snapchat</span></div><div class="app" data-app="maps"><div class="icon" style="background:linear-gradient(180deg,#7ad37a,#3b9ee6)">🗺️</div><span>الخرائط</span></div></div></div>
   <div id="dots"><i class="a"></i><i></i></div>
   <div class="dock">
     <div class="app" data-app="phone"><div class="icon" style="background:#30d158"><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div><div class="badge">3</div></div>
+    <div class="app" data-app="wa"><div class="icon" style="background:linear-gradient(180deg,#4be87a,#12b83a)"><svg viewBox="0 0 24 24" width="38" height="38" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg></div></div>
     <div class="app" data-app="cam"><div class="icon" style="background:linear-gradient(180deg,#8e8e93,#48484a)"><svg width="34" height="34" viewBox="0 0 24 24" fill="#1c1c1e"><path d="M9 3 7.2 5H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3z"/><circle cx="12" cy="12" r="4.2" fill="#d1d1d6"/><circle cx="12" cy="12" r="2.4" fill="#1c1c1e"/></svg></div></div>
   </div>
 </div>
@@ -420,6 +440,7 @@ html,body{height:100%;background:#000;overflow:hidden;font-family:-apple-system,
 <div id="a-clock" class="screen appscr"><div class="scroll" id="ck-body"></div>
   <div class="ltabs"><div data-ck="al"><b>⏰</b>المنبه</div><div data-ck="tm"><b>⏲</b>المؤقت</div><div data-ck="sw"><b>⏱</b>عداد التوقيت</div></div></div>
 <div id="a-msgs" class="screen appscr"><div id="nolq"><div class="box"><div class="t">المحادثة خاصة 🔒</div><div class="m">هذي المحادثة خاصة.</div><button id="nolq-btn">طيب</button></div></div><div class="scroll" id="ms-body"></div></div>
+<div id="a-wa" class="screen appscr"><div id="wa-list"><div class="wa-h" id="wa-ttl">المحادثات</div><div class="scroll" id="wa-body"></div><div class="wa-tabs"><div class="a" data-t="c"><b>💬</b>المحادثات</div><div data-t="g"><b>👥</b>المجتمعات</div></div></div><div id="wa-chat"><div class="wa-ch"><span id="wa-bk">‹</span><div class="wa-av" id="wa-cav"></div><div id="wa-cn"></div></div><div id="wa-msgs"></div><div class="wa-inp"><div>رسالة</div></div></div></div>
 <div id="a-calc" class="screen appscr"><div class="cdisp" id="cd">0</div><div class="ckeys" id="ck"></div></div>
 <div id="a-settings" class="screen appscr"><div class="scroll" id="se-body"></div></div>
 <div id="a-store" class="screen appscr"><div class="scroll" id="as-body" style="padding-bottom:100px"></div></div>
@@ -538,6 +559,7 @@ $$('.app').forEach(a=>a.onclick=()=>{
   else if(k==='ig'){show('a-ig');setTimeout(()=>{$('#igscroll').scrollTop=0},50)}
   else if(k==='cam'){show('a-cam');showCamErr()}
   else if($('#a-'+k)){show('a-'+k);const f=window['open_'+k];if(f)f()}
+  else toast('يا ملقوف');
 });
 $('#igback').onclick=goHome;
 /* phone */
@@ -666,7 +688,7 @@ function ntOpen(i){const n=NOTES[i];
 }
 window.open_notes=ntList;
 /* live notifications */
-const nq=[{app:'phone',t:'دانة (المدير العام) (3)',m:'مكالمة فائتة',bg:'#30d158',ic:'📞'},{app:'ig',t:'عبدالرحمن (مدير الرياضات الالكترونية)',m:'متى يجيني الاعتماد ؟',bg:'linear-gradient(45deg,#feda75,#d62976,#4f5bd5)',ic:'💬'},{app:'x',t:'X',m:'RON: ٥٠٣ إعجاب على منشورك',bg:'#000',ic:'𝕏'}];
+const nq=[{app:'phone',t:'دانة (المدير العام) (3)',m:'مكالمة فائتة',bg:'#30d158',ic:'📞'},{app:'wa',t:'عبدالرحمن (مدير الرياضات الالكترونية)',m:'متى يجيني الاعتماد ؟',bg:'#25d366',ic:'💬'},{app:'x',t:'X',m:'RON: ٥٠٣ إعجاب على منشورك',bg:'#000',ic:'𝕏'}];
 let ni=0,ntm=null;
 function openApp(k){const a=document.querySelector(`.app[data-app="${k}"]`);if($('#lock').classList.contains('on'))return;if(a)a.click()}
 function pushNotif(){
@@ -678,6 +700,29 @@ function pushNotif(){
   clearTimeout(ntm);ntm=setTimeout(()=>e.classList.remove('on'),4500);
 }
 setTimeout(pushNotif,15000);setInterval(pushNotif,50000);
+
+/* whatsapp */
+const WA_C=[["عبدالرحمن | Head of Esports", "9:41 ص", "عبدالرحمن: الريس عندي خطة لتطوير قسم الرياضات الإلكترونية\nالريس: كم صفحة؟\nعبدالرحمن: ٣٢ صفحة\nالريس: اختصرها بصفحتين\nعبدالرحمن: المقدمة لحالها ٤ صفحات\nالريس: أجل نتقابل بكرة"], ["راشد | Esports Director", "9:20 ص", "راشد: الريس حصلنا لاعب مستواه ممتاز\nالريس: كم يطلب؟\nراشد: لا تستعجل خلني أعطيك مميزاته\nالريس: كم يطلب يا راشد\nراشد: كنت أتمنى ما نبدأ من هالنقطة"], ["دانة | General Manager", "8:55 ص", "دانة: عندك ٣ اجتماعات اليوم\nالريس: كنسلي واحد\nدانة: كلها أنت طلبتها\nالريس: طيب أجليها\nدانة: كلها مؤجلة من الأسبوع الماضي\nالريس: واضح إني كنت متحمس الأسبوع الماضي"], ["سهام | Technical Assistant", "8:30 ص", "## أمس\nسهام: خلصت التقرير الفني ورفعته بالملفات\nالريس: ممتاز يعطيك العافية\nسهام: قريته؟\nالريس: للحين لا\nسهام: أجل على أي أساس ممتاز؟\nالريس: ثقة بالطاقم الفني\n## اليوم\nسهام: الريس أحد اللاعبين طالب إجازة من التدريب\nالريس: وش السبب؟\nسهام: يقول يحتاج يغير جو\nالريس: وين بيروح؟\nسهام: يلعب نفس اللعبة مع أخوياه"], ["حمزه | Talent Scout", "أمس", "حمزه: الريس اكتشفت موهبة جديدة\nالريس: كم عمره؟\nحمزه: ١٧\nالريس: وش إنجازاته؟\nحمزه: للحين ما عنده بس عندي إحساس إنه بيصير نجم\nالريس: حمزه حنا نادي مو برنامج توقعات"], ["توفيق | Fighting Games Manager", "أمس", "توفيق: الريس نحتاج نتعاقد مع لاعب تيكن\nالريس: مو الأسبوع الماضي قلت خلاص اكتفينا؟\nتوفيق: هذا غير\nالريس: كل لاعب ترسله تقول هذا غير\nتوفيق: بس هذا فعلاً غير\nالريس: أرسل ملفه يا توفيق"], ["قابريال | Europe", "الثلاثاء", "Gabriel: Boss, are you awake?\nPresident: Unfortunately, yes\nGabriel: I found an interesting opportunity in Europe\nPresident: How interesting?\nGabriel: Very interesting\nPresident: Financially interesting or financially dangerous?\nGabriel: Let's schedule a meeting"]],WA_G=[["CODM بنات", "10:02 ص", "نورة: @دانة بنسوي شي شاطح شوي بالبطولة ونبي الإذن\nدانة: الله يستر وش ناوين عليه\nنورة: بنغير أسامينا بالبطولة، يعني بو عتب وقحط وأبو شاي\nريما: أنا حجزت أبو عتب محد ياخذه\nرحاب: وأنا أبو مطلق\nدانة: أنا مسجلتكم ببطولة نسائية ولا مزاين إبل؟\nنورة: طيب وافقتي ولا لا\nدانة: تخيلوا الريس يتابع البث ويسمع المعلق يقول أبو مطلق آخر لاعبة متبقية من رون\nرحاب: ههههههههههههههههههههه\nريما: أبو عتب يشيل القيم بإذن الله\nدانة: والله لأرسل المحادثة للريس\nنورة: لا تكفين تونا موقعين العقود\nدانة: @all تم تحويل القروب إلى الموارد البشرية\n!! أبو عتب يغادر القروب"], ["Management | الإدارة", "9:50 ص", "دانة: يا جماعة نحتاج نلتزم بمواعيد الاجتماعات\nعبدالرحمن: أتفق\nراشد: أتفق\nارين: أتفق\nالريس: ممتاز وينكم الحين؟"], ["Partnerships & Business Development | الشراكات وتطوير الأعمال", "أمس", "دانة: الراعي يسأل عن العائد المتوقع من الشراكة\nارين: انتشار وظهور إعلامي\nعبدالرحمن: حضور في البطولات\nراشد: وندعي له بعد كل مباراة\nالريس: الأخيرة ميزة حصرية لا تحطونها بكل الباقات"], ["Marketing & Communications | التسويق والاتصالات", "أمس", "ارين: الإعلان جاهز للنشر بانتظار الموافقة النهائية\nدانة: بالنسبة لي معتمد\nالريس: عندي تعديل بسيط\nارين: تفضل ريس"], ["Esports Operations | العمليات التشغيلية للرياضات الإلكترونية", "الثلاثاء", "حمزه: حصلت لاعب ما خسر ولا بطولة\nعبدالرحمن: ممتاز كم بطولة شارك فيها؟\nحمزه: للحين ما شارك\nراشد: إحصائياً كلامه صحيح"], ["Competitive Staff | الطاقم الفني", "الثلاثاء", "سهام: تم إرسال التقرير الفني للفريق\nعبدالرحمن: فيه تحسن عن الأسبوع الماضي؟\nسهام: الحضور والالتزام تحسن بشكل ملحوظ\nتوفيق: والأداء؟\nسهام: خلونا نفرح بإنجاز واحد على الأقل"], ["Executive Management | الإدارة العليا", "الاثنين", "الريس: نحتاج نفكر خارج الصندوق\nعبدالرحمن: عندي عدة مقترحات\nارين: وأنا عندي أفكار جديدة\nراشد: فيه ميزانية؟\nدانة: لا\nراشد: أجل نرجع داخل الصندوق"], ["RON Family | عائلة رون", "الاثنين", "دانة: وش آخر دورة تدريبية أخذتوها؟\nعبدالرحمن: إدارة الفرق\nارين: التسويق الرقمي\nتوفيق: الإدارة الرياضية\nراشد: إدارة الوقت\nالريس: ممتاز متى خلصتها؟\nراشد: للحين ما حصلت وقت أكملها"]];
+const wl=x=>x.trim().split('\n').filter(l=>l.trim()).map(l=>{l=l.trim();if(l.startsWith('##'))return{s:l.slice(2).trim()};if(l.startsWith('!!'))return{y:l.slice(2).trim()};const i=l.indexOf(':');return{n:l.slice(0,i).trim(),t:l.slice(i+1).trim()}});
+const wcl=['#53bdeb','#e26ab6','#ffa726','#7fdb8f','#c490e4','#ff8a65','#4dd0e1'],wco=n=>wcl[[...n].reduce((a,c)=>a+c.charCodeAt(0),0)%7];
+const isOut=n=>n==='الريس'||n==='President';
+function waRow(c,g,k,sq){const m=wl(c[2]).filter(x=>x.t||x.y).pop();return `<div class="wa-r ${g?'wa-g':''}" data-k="${k}"><div class="wa-av ${sq?'sq':''}" style="background:${wco(c[0])}">${c[0][0]}</div><div class="wa-in"><div class="wa-n">${c[0]}</div><div class="wa-p" dir="auto">${m.t||m.y}</div></div><div class="wa-tm">${c[1]}</div></div>`}
+function waTab(t){
+  $$('.wa-tabs div').forEach(d=>d.classList.toggle('a',d.dataset.t===t));
+  $('#wa-ttl').textContent=t==='c'?'المحادثات':'المجتمعات';
+  $('#wa-body').innerHTML=t==='c'?`<div class="wa-sec">محادثات شخصية</div>`+WA_C.map((c,i)=>waRow(c,0,'c'+i)).join(''):`<div class="wa-r" style="cursor:default"><div class="wa-av sq" style="background:#00a884;width:52px;height:52px">RON</div><div class="wa-in"><div class="wa-n">RON Group</div><div class="wa-p">مجتمع • ${WA_G.length} مجموعات</div></div></div><div class="wa-sec">المجموعات</div>`+WA_G.map((c,i)=>waRow(c,1,'g'+i)).join('');
+  $$('#wa-body .wa-r[data-k]').forEach(r=>r.onclick=()=>waOpen(r.dataset.k));
+  $('#wa-body').scrollTop=0;
+}
+function waOpen(k){
+  const g=k[0]==='g',c=(g?WA_G:WA_C)[+k.slice(1)];
+  $('#wa-cn').textContent=c[0];const av=$('#wa-cav');av.textContent=c[0][0];av.style.background=wco(c[0]);
+  $('#wa-msgs').innerHTML=wl(c[2]).map(x=>x.s?`<div class="wa-pill">${x.s}</div>`:x.y?`<div class="wa-pill">${x.y}</div>`:`<div class="wa-b ${isOut(x.n)?'o':''}" dir="auto">${g&&!isOut(x.n)?`<i style="color:${wco(x.n)}">${x.n}</i>`:''}${x.t}</div>`).join('');
+  $('#wa-list').style.display='none';$('#wa-chat').style.display='block';$('#wa-msgs').scrollTop=0;
+}
+$('#wa-bk').onclick=()=>{$('#wa-chat').style.display='none';$('#wa-list').style.display='block'};
+$$('.wa-tabs div').forEach(d=>d.onclick=()=>waTab(d.dataset.t));
+window.open_wa=()=>{$('#wa-chat').style.display='none';$('#wa-list').style.display='block';waTab('c')};
 /* control center */
 function closeCC(){$('#cc').classList.remove('on')}
 function openCC(){if($('#lock').classList.contains('on'))return;$('#cc').classList.add('on')}
